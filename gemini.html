@@ -1,1 +1,377 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlas Isıtma Soğutma | 7/24 Teknik Servis Hizmeti</title>
+    <meta name="description" content="Atlas Isıtma Soğutma - Kombi, klima ve teknik servis hizmetlerinde 7/24 profesyonel çözümler. Hızlı ve güvenilir teknik destek için hemen arayın: 0506 094 95 61">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://atlasisıtmasogutma.github.io/">
 
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HVACBusiness",
+      "name": "Atlas Isıtma Soğutma",
+      "image": "https://atlasisıtmasogutma.github.io/logo.png",
+      "telephone": "+905060949561",
+      "url": "https://atlasisıtmasogutma.github.io/",
+      "priceRange": "₺₺",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "İzmir",
+        "addressCountry": "TR"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "description": "Profesyonel ısıtma ve soğutma sistemleri teknik servisi. Kombi ve klima bakımı, onarımı ve montajı."
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary: #0056b3;
+            --primary-dark: #003d80;
+            --secondary: #ff6b00;
+            --dark: #1a1a1a;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            color: var(--dark);
+            background-color: #fff;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .header-call {
+            background-color: var(--secondary);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: background 0.3s ease;
+        }
+
+        .header-call:hover {
+            background-color: #e05e00;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+            color: #fff;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .badge-list {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(5px);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: #fff;
+            padding: 16px 36px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(255, 107, 0, 0.4);
+            transition: transform 0.2s ease, background 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            background-color: #e05e00;
+        }
+
+        .services {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #eef2f5;
+            border-radius: 12px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        .features {
+            background-color: var(--light);
+            padding: 60px 20px;
+        }
+
+        .features-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .feature-item h4 {
+            font-size: 1.1rem;
+            margin: 10px 0;
+            color: var(--primary-dark);
+        }
+
+        .feature-item p {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        footer {
+            background: var(--dark);
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-phone {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--secondary);
+            text-decoration: none;
+            display: inline-block;
+            margin: 15px 0;
+        }
+
+        .sticky-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--secondary);
+            padding: 12px;
+            text-align: center;
+            display: none;
+            z-index: 999;
+        }
+
+        .sticky-bar a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            .hero p { font-size: 1rem; }
+            .sticky-bar { display: block; }
+            body { padding-bottom: 50px; }
+            .header-call { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">ATLAS <span>ISITMA SOĞUTMA</span></a>
+            <a href="tel:05060949561" class="header-call">📞 0506 094 95 61</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge-list">
+                <span class="badge">🕐 7/24 Kesintisiz Hizmet</span>
+                <span class="badge">📍 Profesyonel Teknik Servis</span>
+            </div>
+            <h1>Atlas Isıtma Soğutma Teknik Servis Hizmetleri</h1>
+            <p>Kombi, klima ve iklimlendirme sistemlerinizde hızlı, garantili ve güvenilir arıza onarım ve bakım çözümleri.</p>
+            <a href="tel:05060949561" class="cta-button">Hemen Arayın: 0506 094 95 61</a>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="section-title">
+            <h2>Hizmetlerimiz</h2>
+            <p>Tüm ısıtma ve soğutma cihazlarınız için uzman kadro desteği</p>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <span class="card-icon">🔥</span>
+                <h3>Kombi Servisi & Bakım</h3>
+                <p>Arıza tespiti, yıllık periyodik bakım, petek temizliği ve parça değişimi işlemleri.</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">❄️</span>
+                <h3>Klima Servisi & Montaj</h3>
+                <p>Klima bakımı, gaz dolumu, arıza onarımı, söküm ve montaj hizmetleri.</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">🛠️</span>
+                <h3>Teknik Arıza Onarımı</h3>
+                <p>Orijinal yedek parça ve yerinde hızlı arıza müdahalesi ile kesintisiz çözüm.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="features-container">
+            <div class="feature-item">
+                <div style="font-size: 2rem;">⚡</div>
+                <h4>Hızlı Müdahale</h4>
+                <p>Çağrınıza en kısa sürede dönüş yapıyor, adrese yönlendiriliyoruz.</p>
+            </div>
+            <div class="feature-item">
+                <div style="font-size: 2rem;">💯</div>
+                <h4>Garantili İşçilik</h4>
+                <p>Yapılan tüm onarım ve parça değişimlerinde güvenilir hizmet.</p>
+            </div>
+            <div class="feature-item">
+                <div style="font-size: 2rem;">📞</div>
+                <h4>7/24 Destek</h4>
+                <p>Günün her saati kesintisiz teknik destek ve servis imkanı.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <h3>ATLAS ISITMA SOĞUTMA</h3>
+            <p>Profesyonel Teknik Servis Çözümleri</p>
+            <a href="tel:05060949561" class="footer-phone">0506 094 95 61</a>
+            <p style="font-size: 0.85rem; opacity: 0.7; margin-top: 20px;">&copy; 2026 Atlas Isıtma Soğutma. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <div class="sticky-bar">
+        <a href="tel:05060949561">📞 Tıkla Ara: 0506 094 95 61</a>
+    </div>
+
+</body>
+</html>
