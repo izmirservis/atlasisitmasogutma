@@ -1,1 +1,271 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atlas Isıtma Soğutma | 7/24 Kombi ve Klima Servisi - 0506 094 95 61</title>
+<meta name="description" content="Atlas Isıtma Soğutma - Kombi servisi, klima bakım, doğalgaz tesisatı, ısıtma ve soğutma sistemleri. 7/24 kesintisiz hizmet. Hemen arayın: 0506 094 95 61">
+<meta name="keywords" content="Atlas Isıtma Soğutma, kombi servisi, klima servisi, doğalgaz tesisatı, ısıtma soğutma, kombi bakım, klima montaj">
+<meta name="author" content="Atlas Isıtma Soğutma">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Atlas Isıtma Soğutma | 7/24 Servis">
+<meta property="og:description" content="Kombi, klima ve doğalgaz servisi. 7/24 kesintisiz hizmet: 0506 094 95 61">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://kullaniciadi.github.io/">
 
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Segoe UI', Tahoma, sans-serif; color:#222; line-height:1.6; }
+a { text-decoration:none; color:inherit; }
+
+/* ÜST BAR */
+.topbar {
+  background:#1a3c5e; color:#fff; padding:10px 20px;
+  display:flex; justify-content:space-between; align-items:center;
+  flex-wrap:wrap; font-size:14px;
+}
+.topbar .tel { font-weight:bold; color:#ffc107; }
+
+/* HEADER */
+header {
+  background:linear-gradient(135deg,#1a3c5e 0%,#2d6a9f 100%);
+  color:#fff; padding:60px 20px; text-align:center;
+  position:relative; overflow:hidden;
+}
+header::before {
+  content:''; position:absolute; top:-50%; right:-20%;
+  width:500px; height:500px; background:rgba(255,193,7,.1);
+  border-radius:50%;
+}
+header h1 { font-size:2.4rem; margin-bottom:15px; position:relative; }
+header p { font-size:1.15rem; opacity:.95; margin-bottom:30px; position:relative; }
+.btn {
+  display:inline-block; background:#ffc107; color:#1a3c5e;
+  padding:16px 40px; border-radius:50px; font-weight:bold;
+  font-size:1.1rem; transition:.3s; box-shadow:0 4px 20px rgba(0,0,0,.25);
+  position:relative;
+}
+.btn:hover { background:#fff; transform:translateY(-3px); box-shadow:0 8px 30px rgba(0,0,0,.3); }
+.btn-outline {
+  background:transparent; color:#fff; border:2px solid #fff;
+  margin-left:12px;
+}
+.btn-outline:hover { background:#fff; color:#1a3c5e; }
+
+/* BÖLÜMLER */
+section { padding:70px 20px; max-width:1150px; margin:auto; }
+h2 {
+  text-align:center; font-size:2rem; color:#1a3c5e;
+  margin-bottom:15px;
+}
+.subtitle { text-align:center; color:#666; margin-bottom:45px; font-size:1.05rem; }
+
+/* HİZMET KARTLARI */
+.services { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:28px; }
+.card {
+  background:#fff; border-radius:16px; padding:35px 28px;
+  box-shadow:0 8px 30px rgba(0,0,0,.08); text-align:center;
+  transition:.3s; border-top:4px solid #ffc107;
+}
+.card:hover { transform:translateY(-10px); box-shadow:0 20px 40px rgba(0,0,0,.15); }
+.card .icon { font-size:2.8rem; margin-bottom:18px; }
+.card h3 { color:#1a3c5e; margin-bottom:12px; font-size:1.25rem; }
+.card p { color:#555; font-size:.95rem; }
+
+/* NEDEN BİZ */
+.why { background:#f4f8fb; }
+.why-inner { max-width:1150px; margin:auto; }
+.features { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:25px; }
+.feature { display:flex; gap:15px; align-items:flex-start; background:#fff; padding:20px; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,.06); }
+.feature .check {
+  background:#1a3c5e; color:#ffc107; width:32px; height:32px;
+  border-radius:50%; display:flex; align-items:center; justify-content:center;
+  flex-shrink:0; font-weight:bold; font-size:1rem;
+}
+.feature strong { color:#1a3c5e; display:block; margin-bottom:4px; }
+.feature span { font-size:.9rem; color:#666; }
+
+/* MARKALAR */
+.brands { text-align:center; background:#fff; }
+.brand-list {
+  display:flex; flex-wrap:wrap; justify-content:center; gap:18px;
+  margin-top:30px;
+}
+.brand-list span {
+  background:#f4f8fb; padding:14px 28px; border-radius:10px;
+  font-weight:600; color:#1a3c5e; border:2px solid #e0e8f0;
+  transition:.3s;
+}
+.brand-list span:hover { background:#1a3c5e; color:#fff; border-color:#1a3c5e; }
+
+/* İLETİŞİM */
+.contact { background:#1a3c5e; color:#fff; text-align:center; }
+.contact h2 { color:#fff; }
+.contact .phone-big {
+  font-size:2.8rem; font-weight:bold; color:#ffc107;
+  margin:25px 0; display:block; transition:.3s;
+}
+.contact .phone-big:hover { color:#fff; transform:scale(1.05); }
+.contact p { margin:10px 0; opacity:.9; font-size:1.05rem; }
+
+/* FOOTER */
+footer {
+  background:#0f2740; color:#8899aa; text-align:center;
+  padding:30px; font-size:.9rem;
+}
+footer a { color:#ffc107; }
+
+/* SABİT ARAMA BUTONU */
+.call-fixed {
+  position:fixed; bottom:25px; right:25px;
+  background:#25d366; color:#fff; width:65px; height:65px;
+  border-radius:50%; display:flex; align-items:center; justify-content:center;
+  font-size:1.9rem; box-shadow:0 6px 25px rgba(37,211,102,.5);
+  z-index:999; animation:pulse 2s infinite;
+}
+@keyframes pulse {
+  0%,100% { box-shadow:0 6px 25px rgba(37,211,102,.5); }
+  50% { box-shadow:0 6px 35px rgba(37,211,102,.9); }
+}
+
+@media(max-width:600px){
+  header h1 { font-size:1.6rem; }
+  header p { font-size:1rem; }
+  .contact .phone-big { font-size:1.8rem; }
+  .btn { padding:13px 28px; font-size:1rem; }
+  .btn-outline { margin:12px 0 0 0; display:block; }
+  h2 { font-size:1.6rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ÜST BAR -->
+<div class="topbar">
+  <span>🕐 7/24 Kesintisiz Hizmet</span>
+  <span class="tel">📞 0 506 094 95 61</span>
+</div>
+
+<!-- HEADER -->
+<header>
+  <h1>Atlas Isıtma Soğutma</h1>
+  <p>Kombi, Klima ve Doğalgaz Servisinde Güvenilir Çözüm Ortağınız</p>
+  <a href="tel:+905060949561" class="btn">📞 Hemen Ara</a>
+  <a href="https://wa.me/905060949561" class="btn btn-outline" target="_blank" rel="noopener">💬 WhatsApp</a>
+</header>
+
+<!-- HİZMETLER -->
+<section>
+  <h2>Hizmetlerimiz</h2>
+  <p class="subtitle">Isıtma ve soğutma sistemleriniz için profesyonel çözümler</p>
+  <div class="services">
+    <div class="card">
+      <div class="icon">🔧</div>
+      <h3>Kombi Servisi</h3>
+      <p>Kombi arıza tespiti, tamiri, bakımı ve montajı. Tüm markalara profesyonel servis.</p>
+    </div>
+    <div class="card">
+      <div class="icon">❄️</div>
+      <h3>Klima Servisi</h3>
+      <p>Klima montaj, bakım, gaz dolumu ve arıza onarımı. Her marka klima servisi.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🔥</div>
+      <h3>Doğalgaz Tesisatı</h3>
+      <p>Doğalgaz tesisat projelendirme, montaj ve gaz açma işlemleri.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🛠️</div>
+      <h3>Periyodik Bakım</h3>
+      <p>Yıllık kombi ve klima bakımı ile verimliliği artırın, arızaları önleyin.</p>
+    </div>
+    <div class="card">
+      <div class="icon">💧</div>
+      <h3>Petek Temizliği</h3>
+      <p>Radyatör ve petek temizliği ile ısıtma sisteminizin verimini artırın.</p>
+    </div>
+    <div class="card">
+      <div class="icon">⚡</div>
+      <h3>Acil Servis</h3>
+      <p>7/24 acil teknik servis. Kısa sürede adresinizdeyiz.</p>
+    </div>
+  </div>
+</section>
+
+<!-- NEDEN BİZ -->
+<section class="why" style="max-width:100%;">
+  <div class="why-inner">
+    <h2>Neden Atlas Isıtma Soğutma?</h2>
+    <p class="subtitle">Kalite, güven ve profesyonel hizmet anlayışı</p>
+    <div class="features">
+      <div class="feature">
+        <div class="check">✓</div>
+        <div><strong>Uzman Ekip</strong><span>Deneyimli teknik kadro</span></div>
+      </div>
+      <div class="feature">
+        <div class="check">✓</div>
+        <div><strong>Garantili İşçilik</strong><span>Yapılan işlemler garantili</span></div>
+      </div>
+      <div class="feature">
+        <div class="check">✓</div>
+        <div><strong>7/24 Hizmet</strong><span>Kesintisiz teknik destek</span></div>
+      </div>
+      <div class="feature">
+        <div class="check">✓</div>
+        <div><strong>Hızlı Müdahale</strong><span>Aynı gün servis</span></div>
+      </div>
+      <div class="feature">
+        <div class="check">✓</div>
+        <div><strong>Orijinal Parça</strong><span>Kaliteli yedek parça kullanımı</span></div>
+      </div>
+      <div class="feature">
+        <div class="check">✓</div>
+        <div><strong>Uygun Fiyat</strong><span>Şeffaf fiyatlandırma</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARKALAR -->
+<section class="brands">
+  <h2>Servis Verdiğimiz Markalar</h2>
+  <p class="subtitle">Tüm kombi ve klima markalarına profesyonel servis</p>
+  <div class="brand-list">
+    <span>Vaillant</span>
+    <span>Bosch</span>
+    <span>Baymak</span>
+    <span>DemirDöküm</span>
+    <span>Daikin</span>
+    <span>Mitsubishi</span>
+    <span>Arçelik</span>
+    <span>Vestel</span>
+    <span>Samsung</span>
+    <span>LG</span>
+    <span>Ferroli</span>
+    <span>Ariston</span>
+  </div>
+</section>
+
+<!-- İLETİŞİM -->
+<section class="contact" style="max-width:100%;">
+  <div style="max-width:850px;margin:auto;">
+    <h2>Bize Ulaşın</h2>
+    <p>Isıtma ve soğutma sistemleriniz için hemen arayın!</p>
+    <a href="tel:+905060949561" class="phone-big">0 506 094 95 61</a>
+    <p>🕐 7/24 Kesintisiz Hizmet</p>
+    <p>📍 Profesyonel Teknik Servis</p>
+    <a href="https://wa.me/905060949561" class="btn" style="margin-top:25px;" target="_blank" rel="noopener">💬 WhatsApp'tan Yaz</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 <strong>Atlas Isıtma Soğutma</strong> — Tüm Hakları Saklıdır</p>
+  <p>Telefon: <a href="tel:+905060949561">0 506 094 95 61</a></p>
+</footer>
+
+<!-- SABİT ARAMA -->
+<a href="tel:+905060949561" class="call-fixed" title="Hemen Ara">📞</a>
+
+</body>
+</html>
