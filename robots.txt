@@ -1,1 +1,10 @@
+# Atlas Isıtma Soğutma - Robots.txt
+User-agent: *
+Allow: /
 
+# Arama motorlarının indekslemesine gerek olmayan teknik dosyalar
+Disallow: /*.json$
+Disallow: /dist/
+
+# Arama Motoru Botları İçin Site Haritası Konumu
+Sitemap: https://izmirservis.github.io/atlasisitmasogutma/sitemap.xml
