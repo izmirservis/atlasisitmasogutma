@@ -532,6 +532,54 @@
         .sticky-btn-call { background-color: var(--secondary); }
         .sticky-btn-wa { background-color: var(--whatsapp); }
 
+        /* 3 KADEMELİ AÇILIR MENÜ CSS YAPISI */
+        .main-nav { display: flex; align-items: center; }
+        .nav-menu { display: flex; list-style: none; gap: 8px; margin: 0; padding: 0; }
+        .nav-menu li { position: relative; }
+        .nav-menu a { color: var(--dark); text-decoration: none; font-weight: 700; font-size: 0.88rem; padding: 10px 12px; display: block; }
+        .nav-menu a:hover { color: var(--secondary); }
+
+        /* 2. Seviye Dropdown (İlçeler) - Taşmayı Önleyen Dikey Scroll */
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #ffffff;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            min-width: 220px;
+            max-height: 420px;
+            overflow-y: auto;
+            list-style: none;
+            display: none;
+            z-index: 1001;
+            border: 1px solid var(--light-gray);
+        }
+        .has-dropdown:hover > .dropdown { display: block; }
+
+        /* 3. Seviye Sub-Dropdown (İlçe x Markalar) */
+        .dropdown-sub {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            background: #ffffff;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            min-width: 240px;
+            list-style: none;
+            display: none;
+            z-index: 1002;
+            border: 1px solid var(--light-gray);
+        }
+        .has-dropdown-sub:hover > .dropdown-sub { display: block; }
+
+        .dropdown li a, .dropdown-sub li a { font-size: 0.85rem; padding: 8px 14px; border-bottom: 1px solid #f1f5f9; }
+        .dropdown li a:hover, .dropdown-sub li a:hover { background-color: var(--light); color: var(--primary); }
+
+        @media (max-width: 992px) { 
+            .main-nav { display: none; } 
+        }
+
         @media (max-width: 768px) {
             .hero h1 { font-size: 1.65rem; }
             .hero p { font-size: 0.95rem; }
@@ -540,48 +588,6 @@
             .sticky-bar { display: block; }
             section { padding: 45px 15px; }
         }
-        /* Ana Menü */
-.main-nav { display: flex; align-items: center; }
-.nav-menu { display: flex; list-style: none; gap: 8px; margin: 0; padding: 0; }
-.nav-menu li { position: relative; }
-.nav-menu a { color: var(--dark); text-decoration: none; font-weight: 700; font-size: 0.88rem; padding: 10px 12px; display: block; }
-.nav-menu a:hover { color: var(--secondary); }
-
-/* 2. Seviye Dropdown (İlçeler) - Taşmayı Önleyen Dikey Scroll */
-.dropdown {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: #ffffff;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    border-radius: 8px;
-    min-width: 220px;
-    max-height: 400px; /* 25 İlçe sığsın diye kaydırma çubuğu */
-    overflow-y: auto;
-    list-style: none;
-    display: none;
-    z-index: 1001;
-    border: 1px solid var(--light-gray);
-}
-.has-dropdown:hover > .dropdown { display: block; }
-
-/* 3. Seviye Sub-Dropdown (İlçe x Markalar) */
-.dropdown-sub {
-    position: absolute;
-    top: 0;
-    left: 100%;
-    background: #ffffff;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    border-radius: 8px;
-    min-width: 240px;
-    list-style: none;
-    display: none;
-    z-index: 1002;
-    border: 1px solid var(--light-gray);
-}
-.has-dropdown-sub:hover > .dropdown-sub { display: block; }
-
-@media (max-width: 992px) { .main-nav { display: none; } }
     </style>
 </head>
 <body>
@@ -601,10 +607,90 @@
     <header>
         <div class="header-container">
             <a href="https://izmirservis.github.io/atlasisitmasogutma/" class="logo">ATLAS <span>ISITMA SOĞUTMA</span></a>
+            
+            <!-- 3 KADEMELİ DEV MENÜ YAPISI -->
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li><a href="https://izmirservis.github.io/atlasisitmasogutma/">Ana Sayfa</a></li>
+                    
+                    <!-- KOMBİ SERVİSİ MENÜSÜ -->
+                    <li class="has-dropdown">
+                        <a href="#">Kombi Servisi ▾</a>
+                        <ul class="dropdown">
+                            <li class="has-dropdown-sub"><a href="aliaga-kombi-servisi.html">Aliağa Kombi Servisi ▸</a><ul class="dropdown-sub"><li><a href="aliaga-vaillant-kombi-servisi.html">Aliağa Vaillant</a></li><li><a href="aliaga-bosch-kombi-servisi.html">Aliağa Bosch</a></li><li><a href="aliaga-baymak-kombi-servisi.html">Aliağa Baymak</a></li><li><a href="aliaga-demirdokum-kombi-servisi.html">Aliağa DemirDöküm</a></li><li><a href="aliaga-buderus-kombi-servisi.html">Aliağa Buderus</a></li><li><a href="aliaga-viessmann-kombi-servisi.html">Aliağa Viessmann</a></li><li><a href="aliaga-eca-kombi-servisi.html">Aliağa E.C.A</a></li><li><a href="aliaga-protherm-kombi-servisi.html">Aliağa Protherm</a></li><li><a href="aliaga-airfel-kombi-servisi.html">Aliağa Airfel</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="balcova-kombi-servisi.html">Balçova Kombi Servisi ▸</a><ul class="dropdown-sub"><li><a href="balcova-vaillant-kombi-servisi.html">Balçova Vaillant</a></li><li><a href="balcova-bosch-kombi-servisi.html">Balçova Bosch</a></li><li><a href="balcova-baymak-kombi-servisi.html">Balçova Baymak</a></li><li><a href="balcova-demirdokum-kombi-servisi.html">Balçova DemirDöküm</a></li><li><a href="balcova-buderus-kombi-servisi.html">Balçova Buderus</a></li><li><a href="balcova-viessmann-kombi-servisi.html">Balçova Viessmann</a></li><li><a href="balcova-eca-kombi-servisi.html">Balçova E.C.A</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="bayrakli-kombi-servisi.html">Bayraklı Kombi Servisi ▸</a><ul class="dropdown-sub"><li><a href="bayrakli-vaillant-kombi-servisi.html">Bayraklı Vaillant</a></li><li><a href="bayrakli-bosch-kombi-servisi.html">Bayraklı Bosch</a></li><li><a href="bayrakli-baymak-kombi-servisi.html">Bayraklı Baymak</a></li><li><a href="bayrakli-demirdokum-kombi-servisi.html">Bayraklı DemirDöküm</a></li><li><a href="bayrakli-eca-kombi-servisi.html">Bayraklı E.C.A</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="bornova-kombi-servisi.html">Bornova Kombi Servisi ▸</a><ul class="dropdown-sub"><li><a href="bornova-vaillant-kombi-servisi.html">Bornova Vaillant</a></li><li><a href="bornova-bosch-kombi-servisi.html">Bornova Bosch</a></li><li><a href="bornova-baymak-kombi-servisi.html">Bornova Baymak</a></li><li><a href="bornova-demirdokum-kombi-servisi.html">Bornova DemirDöküm</a></li><li><a href="bornova-buderus-kombi-servisi.html">Bornova Buderus</a></li><li><a href="bornova-viessmann-kombi-servisi.html">Bornova Viessmann</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="buca-kombi-servisi.html">Buca Kombi Servisi ▸</a><ul class="dropdown-sub"><li><a href="buca-vaillant-kombi-servisi.html">Buca Vaillant</a></li><li><a href="buca-bosch-kombi-servisi.html">Buca Bosch</a></li><li><a href="buca-baymak-kombi-servisi.html">Buca Baymak</a></li><li><a href="buca-demirdokum-kombi-servisi.html">Buca DemirDöküm</a></li><li><a href="buca-buderus-kombi-servisi.html">Buca Buderus</a></li><li><a href="buca-viessmann-kombi-servisi.html">Buca Viessmann</a></li><li><a href="buca-eca-kombi-servisi.html">Buca E.C.A</a></li><li><a href="buca-protherm-kombi-servisi.html">Buca Protherm</a></li><li><a href="buca-airfel-kombi-servisi.html">Buca Airfel</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="cigli-kombi-servisi.html">Çiğli Kombi Servisi ▸</a><ul class="dropdown-sub"><li><a href="cigli-vaillant-kombi-servisi.html">Çiğli Vaillant</a></li><li><a href="cigli-bosch-kombi-servisi.html">Çiğli Bosch</a></li><li><a href="cigli-baymak-kombi-servisi.html">Çiğli Baymak</a></li><li><a href="cigli-demirdokum-kombi-servisi.html">Çiğli DemirDöküm</a></li><li><a href="cigli-buderus-kombi-servisi.html">Çiğli Buderus</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="foca-kombi-servisi.html">Foça Kombi Servisi ▸</a><ul class="dropdown-sub"><li><a href="foca-vaillant-kombi-servisi.html">Foça Vaillant</a></li><li><a href="foca-bosch-kombi-servisi.html">Foça Bosch</a></li><li><a href="foca-baymak-kombi-servisi.html">Foça Baymak</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="gaziemir-kombi-servisi.html">Gaziemir Kombi Servisi ▸</a><ul class="dropdown-sub"><li><a href="gaziemir-vaillant-kombi-servisi.html">Gaziemir Vaillant</a></li><li><a href="gaziemir-bosch-kombi-servisi.html">Gaziemir Bosch</a></li><li><a href="gaziemir-buderus-kombi-servisi.html">Gaziemir Buderus</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="guzelbahce-kombi-servisi.html">Güzelbahçe Kombi Servisi ▸</a><ul class="dropdown-sub"><li><a href="guzelbahce-vaillant-kombi-servisi.html">Güzelbahçe Vaillant</a></li><li><a href="guzelbahce-bosch-kombi-servisi.html">Güzelbahçe Bosch</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="karabaglar-kombi-servisi.html">Karabağlar Kombi Servisi ▸</a><ul class="dropdown-sub"><li><a href="karabaglar-vaillant-kombi-servisi.html">Karabağlar Vaillant</a></li><li><a href="karabaglar-bosch-kombi-servisi.html">Karabağlar Bosch</a></li><li><a href="karabaglar-baymak-kombi-servisi.html">Karabağlar Baymak</a></li><li><a href="karabaglar-demirdokum-kombi-servisi.html">Karabağlar DemirDöküm</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="karaburun-kombi-servisi.html">Karaburun Kombi Servisi ▸</a><ul class="dropdown-sub"><li><a href="karaburun-vaillant-kombi-servisi.html">Karaburun Vaillant</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="karsiyaka-kombi-servisi.html">Karşıyaka Kombi Servisi ▸</a><ul class="dropdown-sub"><li><a href="karsiyaka-vaillant-kombi-servisi.html">Karşıyaka Vaillant</a></li><li><a href="karsiyaka-bosch-kombi-servisi.html">Karşıyaka Bosch</a></li><li><a href="karsiyaka-baymak-kombi-servisi.html">Karşıyaka Baymak</a></li><li><a href="karsiyaka-demirdokum-kombi-servisi.html">Karşıyaka DemirDöküm</a></li><li><a href="karsiyaka-buderus-kombi-servisi.html">Karşıyaka Buderus</a></li><li><a href="karsiyaka-viessmann-kombi-servisi.html">Karşıyaka Viessmann</a></li><li><a href="karsiyaka-eca-kombi-servisi.html">Karşıyaka E.C.A</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="kemalpasa-kombi-servisi.html">Kemalpaşa Kombi Servisi ▸</a><ul class="dropdown-sub"><li><a href="kemalpasa-vaillant-kombi-servisi.html">Kemalpaşa Vaillant</a></li><li><a href="kemalpasa-bosch-kombi-servisi.html">Kemalpaşa Bosch</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="kinik-kombi-servisi.html">Kınık Kombi Servisi ▸</a><ul class="dropdown-sub"><li><a href="kinik-baymak-kombi-servisi.html">Kınık Baymak</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="kiraz-kombi-servisi.html">Kiraz Kombi Servisi ▸</a><ul class="dropdown-sub"><li><a href="kiraz-demirdokum-kombi-servisi.html">Kiraz DemirDöküm</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="konak-kombi-servisi.html">Konak Kombi Servisi ▸</a><ul class="dropdown-sub"><li><a href="konak-vaillant-kombi-servisi.html">Konak Vaillant</a></li><li><a href="konak-bosch-kombi-servisi.html">Konak Bosch</a></li><li><a href="konak-demirdokum-kombi-servisi.html">Konak DemirDöküm</a></li><li><a href="konak-baymak-kombi-servisi.html">Konak Baymak</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="menderes-kombi-servisi.html">Menderes Kombi Servisi ▸</a><ul class="dropdown-sub"><li><a href="menderes-vaillant-kombi-servisi.html">Menderes Vaillant</a></li><li><a href="menderes-bosch-kombi-servisi.html">Menderes Bosch</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="menemen-kombi-servisi.html">Menemen Kombi Servisi ▸</a><ul class="dropdown-sub"><li><a href="menemen-viessmann-kombi-servisi.html">Menemen Viessmann</a></li><li><a href="menemen-baymak-kombi-servisi.html">Menemen Baymak</a></li><li><a href="menemen-bosch-kombi-servisi.html">Menemen Bosch</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="narlidere-kombi-servisi.html">Narlıdere Kombi Servisi ▸</a><ul class="dropdown-sub"><li><a href="narlidere-vaillant-kombi-servisi.html">Narlıdere Vaillant</a></li><li><a href="narlidere-buderus-kombi-servisi.html">Narlıdere Buderus</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="odemis-kombi-servisi.html">Ödemiş Kombi Servisi ▸</a><ul class="dropdown-sub"><li><a href="odemis-demirdokum-kombi-servisi.html">Ödemiş DemirDöküm</a></li><li><a href="odemis-vaillant-kombi-servisi.html">Ödemiş Vaillant</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="seferihisar-kombi-servisi.html">Seferihisar Kombi Servisi ▸</a><ul class="dropdown-sub"><li><a href="seferihisar-bosch-kombi-servisi.html">Seferihisar Bosch</a></li><li><a href="seferihisar-baymak-kombi-servisi.html">Seferihisar Baymak</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="selcuk-kombi-servisi.html">Selçuk Kombi Servisi ▸</a><ul class="dropdown-sub"><li><a href="selcuk-vaillant-kombi-servisi.html">Selçuk Vaillant</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="tire-kombi-servisi.html">Tire Kombi Servisi ▸</a><ul class="dropdown-sub"><li><a href="tire-demirdokum-kombi-servisi.html">Tire DemirDöküm</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="torbali-kombi-servisi.html">Torbalı Kombi Servisi ▸</a><ul class="dropdown-sub"><li><a href="torbali-airfel-kombi-servisi.html">Torbalı Airfel</a></li><li><a href="torbali-demirdokum-kombi-servisi.html">Torbalı DemirDöküm</a></li><li><a href="torbali-bosch-kombi-servisi.html">Torbalı Bosch</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="urla-kombi-servisi.html">Urla Kombi Servisi ▸</a><ul class="dropdown-sub"><li><a href="urla-vaillant-kombi-servisi.html">Urla Vaillant</a></li><li><a href="urla-buderus-kombi-servisi.html">Urla Buderus</a></li></ul></li>
+                        </ul>
+                    </li>
+
+                    <!-- KLİMA SERVİSİ MENÜSÜ -->
+                    <li class="has-dropdown">
+                        <a href="#">Klima Servisi ▾</a>
+                        <ul class="dropdown">
+                            <li class="has-dropdown-sub"><a href="aliaga-klima-servisi.html">Aliağa Klima Servisi ▸</a><ul class="dropdown-sub"><li><a href="aliaga-daikin-klima-servisi.html">Aliağa Daikin</a></li><li><a href="aliaga-mitsubishi-klima-servisi.html">Aliağa Mitsubishi</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="balcova-klima-servisi.html">Balçova Klima Servisi ▸</a><ul class="dropdown-sub"><li><a href="balcova-mitsubishi-klima-servisi.html">Balçova Mitsubishi</a></li><li><a href="balcova-daikin-klima-servisi.html">Balçova Daikin</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="bayrakli-klima-servisi.html">Bayraklı Klima Servisi ▸</a><ul class="dropdown-sub"><li><a href="bayrakli-samsung-klima-servisi.html">Bayraklı Samsung</a></li><li><a href="bayrakli-lg-klima-servisi.html">Bayraklı LG</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="bornova-klima-servisi.html">Bornova Klima Servisi ▸</a><ul class="dropdown-sub"><li><a href="bornova-samsung-klima-servisi.html">Bornova Samsung</a></li><li><a href="bornova-lg-klima-servisi.html">Bornova LG</a></li><li><a href="bornova-daikin-klima-servisi.html">Bornova Daikin</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="buca-klima-servisi.html">Buca Klima Servisi ▸</a><ul class="dropdown-sub"><li><a href="buca-daikin-klima-servisi.html">Buca Daikin</a></li><li><a href="buca-mitsubishi-klima-servisi.html">Buca Mitsubishi</a></li><li><a href="buca-arcelik-klima-servisi.html">Buca Arçelik</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="cigli-klima-servisi.html">Çiğli Klima Servisi ▸</a><ul class="dropdown-sub"><li><a href="cigli-lg-klima-servisi.html">Çiğli LG</a></li><li><a href="cigli-daikin-klima-servisi.html">Çiğli Daikin</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="gaziemir-klima-servisi.html">Gaziemir Klima Servisi ▸</a><ul class="dropdown-sub"><li><a href="gaziemir-mitsubishi-klima-servisi.html">Gaziemir Mitsubishi</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="karabaglar-klima-servisi.html">Karabağlar Klima Servisi ▸</a><ul class="dropdown-sub"><li><a href="karabaglar-arcelik-klima-servisi.html">Karabağlar Arçelik</a></li><li><a href="karabaglar-samsung-klima-servisi.html">Karabağlar Samsung</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="karsiyaka-klima-servisi.html">Karşıyaka Klima Servisi ▸</a><ul class="dropdown-sub"><li><a href="karsiyaka-daikin-klima-servisi.html">Karşıyaka Daikin</a></li><li><a href="karsiyaka-mitsubishi-klima-servisi.html">Karşıyaka Mitsubishi</a></li><li><a href="karsiyaka-samsung-klima-servisi.html">Karşıyaka Samsung</a></li><li><a href="karsiyaka-lg-klima-servisi.html">Karşıyaka LG</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="konak-klima-servisi.html">Konak Klima Servisi ▸</a><ul class="dropdown-sub"><li><a href="konak-daikin-klima-servisi.html">Konak Daikin</a></li><li><a href="konak-mitsubishi-klima-servisi.html">Konak Mitsubishi</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="menemen-klima-servisi.html">Menemen Klima Servisi ▸</a><ul class="dropdown-sub"><li><a href="menemen-arcelik-klima-servisi.html">Menemen Arçelik</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="torbali-klima-servisi.html">Torbalı Klima Servisi ▸</a><ul class="dropdown-sub"><li><a href="torbali-lg-klima-servisi.html">Torbalı LG</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="urla-klima-servisi.html">Urla Klima Servisi ▸</a><ul class="dropdown-sub"><li><a href="urla-samsung-klima-servisi.html">Urla Samsung</a></li><li><a href="urla-daikin-klima-servisi.html">Urla Daikin</a></li></ul></li>
+                        </ul>
+                    </li>
+
+                    <!-- BEYAZ EŞYA SERVİSİ MENÜSÜ -->
+                    <li class="has-dropdown">
+                        <a href="#">Beyaz Eşya Servisi ▾</a>
+                        <ul class="dropdown">
+                            <li class="has-dropdown-sub"><a href="aliaga-beyaz-esya-servisi.html">Aliağa Beyaz Eşya Servisi ▸</a><ul class="dropdown-sub"><li><a href="aliaga-arcelik-beyaz-esya-servisi.html">Aliağa Arçelik</a></li><li><a href="aliaga-beko-beyaz-esya-servisi.html">Aliağa Beko</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="balcova-beyaz-esya-servisi.html">Balçova Beyaz Eşya Servisi ▸</a><ul class="dropdown-sub"><li><a href="balcova-bosch-beyaz-esya-servisi.html">Balçova Bosch</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="bayrakli-beyaz-esya-servisi.html">Bayraklı Beyaz Eşya Servisi ▸</a><ul class="dropdown-sub"><li><a href="bayrakli-vestel-beyaz-esya-servisi.html">Bayraklı Vestel</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="bornova-beyaz-esya-servisi.html">Bornova Beyaz Eşya Servisi ▸</a><ul class="dropdown-sub"><li><a href="bornova-arcelik-beyaz-esya-servisi.html">Bornova Arçelik</a></li><li><a href="bornova-bosch-beyaz-esya-servisi.html">Bornova Bosch</a></li><li><a href="bornova-beko-beyaz-esya-servisi.html">Bornova Beko</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="buca-beyaz-esya-servisi.html">Buca Beyaz Eşya Servisi ▸</a><ul class="dropdown-sub"><li><a href="buca-arcelik-beyaz-esya-servisi.html">Buca Arçelik</a></li><li><a href="buca-beko-beyaz-esya-servisi.html">Buca Beko</a></li><li><a href="buca-vestel-beyaz-esya-servisi.html">Buca Vestel</a></li><li><a href="buca-altus-beyaz-esya-servisi.html">Buca Altus</a></li><li><a href="buca-bosch-beyaz-esya-servisi.html">Buca Bosch</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="cigli-beyaz-esya-servisi.html">Çiğli Beyaz Eşya Servisi ▸</a><ul class="dropdown-sub"><li><a href="cigli-arcelik-beyaz-esya-servisi.html">Çiğli Arçelik</a></li><li><a href="cigli-vestel-beyaz-esya-servisi.html">Çiğli Vestel</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="gaziemir-beyaz-esya-servisi.html">Gaziemir Beyaz Eşya Servisi ▸</a><ul class="dropdown-sub"><li><a href="gaziemir-beko-beyaz-esya-servisi.html">Gaziemir Beko</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="karabaglar-beyaz-esya-servisi.html">Karabağlar Beyaz Eşya Servisi ▸</a><ul class="dropdown-sub"><li><a href="karabaglar-vestel-beyaz-esya-servisi.html">Karabağlar Vestel</a></li><li><a href="karabaglar-arcelik-beyaz-esya-servisi.html">Karabağlar Arçelik</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="karsiyaka-beyaz-esya-servisi.html">Karşıyaka Beyaz Eşya Servisi ▸</a><ul class="dropdown-sub"><li><a href="karsiyaka-arcelik-beyaz-esya-servisi.html">Karşıyaka Arçelik</a></li><li><a href="karsiyaka-bosch-beyaz-esya-servisi.html">Karşıyaka Bosch</a></li><li><a href="karsiyaka-beko-beyaz-esya-servisi.html">Karşıyaka Beko</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="konak-beyaz-esya-servisi.html">Konak Beyaz Eşya Servisi ▸</a><ul class="dropdown-sub"><li><a href="konak-arcelik-beyaz-esya-servisi.html">Konak Arçelik</a></li><li><a href="konak-vestel-beyaz-esya-servisi.html">Konak Vestel</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="menemen-beyaz-esya-servisi.html">Menemen Beyaz Eşya Servisi ▸</a><ul class="dropdown-sub"><li><a href="menemen-beko-beyaz-esya-servisi.html">Menemen Beko</a></li></ul></li>
+                            <li class="has-dropdown-sub"><a href="torbali-beyaz-esya-servisi.html">Torbalı Beyaz Eşya Servisi ▸</a><ul class="dropdown-sub"><li><a href="torbali-arcelik-beyaz-esya-servisi.html">Torbalı Arçelik</a></li></ul></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="tel:+905060949561" style="color: var(--secondary); font-weight: bold;">📞 İletişim</a></li>
+                </ul>
+            </nav>
+
             <div class="header-actions">
                 <a href="https://wa.me/905060949561" class="btn-nav btn-nav-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
                 <a href="tel:+905060949561" class="btn-nav btn-nav-call">📞 0506 094 95 61</a>
- 
             </div>
         </div>
     </header>
@@ -735,7 +821,7 @@
                 <a href="bornova-lg-klima-servisi.html" class="brand-tag">LG</a>
                 <a href="buca-arcelik-beyaz-esya-servisi.html" class="brand-tag">Arçelik</a>
                 <a href="buca-beko-beyaz-esya-servisi.html" class="brand-tag">Beko</a>
-                 <a href="buca-altus-beyaz-esya-servisi.html" class="brand-tag">Altus</a>
+                <a href="buca-altus-beyaz-esya-servisi.html" class="brand-tag">Altus</a>
             </div>
         </div>
     </section>
@@ -774,7 +860,7 @@
             <div class="footer-title">ATLAS ISITMA SOĞUTMA</div>
             <p>İzmir Kombi, Klima, Beyaz Eşya ve TV Özel Teknik Servis Hizmetleri</p>
             <a href="tel:+905060949561" class="footer-phone">0506 094 95 61</a><br/>
-             <a href="https://izmirservis.github.io/atlasisitmasogutma/sitemap.xml" class="footer-phone">Sitemap.xml</a>
+            <a href="https://izmirservis.github.io/atlasisitmasogutma/sitemap.xml" class="footer-phone" style="font-size: 1rem; color: #9ca3af;">Sitemap.xml</a>
             <div class="footer-info">
                 <p>📍 Adres: Hürriyet Mah. Hasan Şarlayan Sk. No:38, 35370 Buca / İzmir</p>
                 <p>🕐 Çalışma Saatleri: 7 Gün 24 Saat Kesintisiz Mobil Servis</p>
