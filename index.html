@@ -540,6 +540,48 @@
             .sticky-bar { display: block; }
             section { padding: 45px 15px; }
         }
+        /* Ana Menü */
+.main-nav { display: flex; align-items: center; }
+.nav-menu { display: flex; list-style: none; gap: 8px; margin: 0; padding: 0; }
+.nav-menu li { position: relative; }
+.nav-menu a { color: var(--dark); text-decoration: none; font-weight: 700; font-size: 0.88rem; padding: 10px 12px; display: block; }
+.nav-menu a:hover { color: var(--secondary); }
+
+/* 2. Seviye Dropdown (İlçeler) - Taşmayı Önleyen Dikey Scroll */
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ffffff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    min-width: 220px;
+    max-height: 400px; /* 25 İlçe sığsın diye kaydırma çubuğu */
+    overflow-y: auto;
+    list-style: none;
+    display: none;
+    z-index: 1001;
+    border: 1px solid var(--light-gray);
+}
+.has-dropdown:hover > .dropdown { display: block; }
+
+/* 3. Seviye Sub-Dropdown (İlçe x Markalar) */
+.dropdown-sub {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: #ffffff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    min-width: 240px;
+    list-style: none;
+    display: none;
+    z-index: 1002;
+    border: 1px solid var(--light-gray);
+}
+.has-dropdown-sub:hover > .dropdown-sub { display: block; }
+
+@media (max-width: 992px) { .main-nav { display: none; } }
     </style>
 </head>
 <body>
